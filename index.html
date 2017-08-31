@@ -1,0 +1,235 @@
+<!--Shane Marshall-->
+<!--R00141496-->
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<title>Shane's Pizzeria</title>
+	</head>
+	
+	<body onchange = "displayPrice()">
+	
+		<script src="functions.js"></script>
+	
+		<nav class="navbar">
+			<ul>
+				<li><a href="#Sauce">Sauce</a></li>
+				<li><a href="#Cheese">Cheese</a></li>
+				<li><a href="#Toppings">Toppings</a></li>
+				<li id="nav-summary"><a href="#Summary">Summary</a></li>
+				<li id="nav-contact"><a href="#footerLeft">Contact</a></li>
+			</ul>
+		</nav>
+		
+		<img src="img/logo.png" id="logo" alt="Pizzeria Logo">
+		<span class="slogan">
+			Stone Bake Pizza
+		</span>
+	
+		<main>
+		<h1 id="Customise">Customise Pizza</h1>
+		<p>Please choose from the options below to customise your pizza</p>
+		
+		<form action = "http://atlantis.cit.ie/displayvalues.php">
+			<h1 id="Sauce">Sauce:</h1>
+				<input type="radio" id = "Tomato_sauce" name="sauceChoice"
+					value ="Tomato" onclick="regularSauce()" 
+					checked> Tomato Sauce
+				<input type="radio" id = "Bbq" name="sauceChoice"
+					value = "Barbeque" onclick="barbequeSauce()"> BBQ Sauce
+				
+			<h1 id="Cheese">Cheese:</h1>
+				<input type="radio" id = "Mozzarella"
+					name="cheeseChoice" value="Mozzarella" 
+					onclick="regularCheese()" checked> Mozzarella	
+				<input type="radio" id = "ExtraMozzarella"
+					name="cheeseChoice" value="ExtraMozzarella" 
+					onclick="extraCheese()"> Extra Mozzarella
+			
+			<h1 id="Toppings">Toppings:</h1>
+				
+				<input type="checkbox" id = "pepperoni"
+					onchange="pizzaTopPepperoni()" name="toppingPepperoni">
+					Pepperoni
+				
+				<input type="checkbox" id = "salami"
+					onchange="pizzaTopSalami()" name="toppingSalami">
+					Salami
+				
+				<input type="checkbox" id="ham"
+					onchange="pizzaTopHam()" name="toppingHam">
+					Ham
+				
+				<input type="checkbox" id = "chicken"
+					onchange="pizzaTopChicken()" name="toppingChicken">
+					Chicken
+				
+				<input type="checkbox" id = "sausage"
+					onchange="pizzaTopSausage()" name="toppingSausage">
+					Sausage
+
+				<input type="checkbox" id = "bacon"
+					onchange="pizzaTopBacon()" name="toppingBacon">
+					Bacon
+			
+			<div id="displayPizza">
+				<img id="img1" src="img/crust.png" alt="">
+				<img id="img2" src="img/sauce.png" alt="">
+				<img id="img3" src="img/cheese.png" alt="">
+			</div>
+		
+			<h1 id="Summary">Summary:</h1>
+			<div id="displayPrice">
+				Total price:  <div class="price">&euro;10</div>
+				<hr>
+				Pizza: <div class='price'> &euro;10</div><br>
+				<hr>
+			</div>
+		
+			<h1>Delivery Details:</h1>
+		
+			<div id="wrapper">
+				<div class="col1">
+					E-mail:<br>
+					<input type="text" id="e-mail" name="e-mail" required
+						pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+						title="characters@characters.domain"
+						onblur="discount()"><br>
+					
+					First name:<br>
+					<input type="text" id="firstname" name="firstName" required
+						pattern="[A-Za-z]{1,}" title="Letters Only"><br>
+				
+					Last name:<br>
+					<input type="text" id="lastname" name="lastName" required
+						pattern="[A-Za-z]{1,}" title="Letters Only"><br>
+					
+					Address:<br>
+					<input type="text" id="address" name="address"
+						required><br>
+					
+					County:<br>
+					<select class="countyList" id ="county" name="county">
+						<option value="Antrim">Antrim</option>
+						<option value="Armagh">Armagh</option>
+						<option value="Carlow">Carlow</option>
+						<option value="Cavan">Cavan</option>
+						<option value="Clare">Clare</option>
+						<option value="Cork">Cork</option>
+						<option value="Derry">Derry</option>
+						<option value="Donegal">Donegal</option>
+						<option value="Down">Down</option>
+						<option value="Dublin">Dublin</option>
+						<option value="Fermanagh">Fermanagh</option>
+						<option value="Galway">Galway</option>
+						<option value="Kerry">Kerry</option>
+						<option value="Kildare">Kildare</option>
+						<option value="Kilkenny">Kilkenny</option>
+						<option value="Laois">Laois</option>
+						<option value="Leitrim">Leitrim</option>
+						<option value="Limerick">Limerick</option>
+						<option value="Longford">Longford</option>
+						<option value="Louth">Louth</option>
+						<option value="Mayo">Mayo</option>
+						<option value="Meath">Meath</option>
+						<option value="Monaghan">Monaghan</option>
+						<option value="Offaly">Offaly</option>
+						<option value="Roscommon">Roscommon</option>
+						<option value="Sligo">Sligo</option>
+						<option value="Tipperary">Tipperary</option>
+						<option value="Tyrone">Tyrone</option>
+						<option value="Waterford">Waterford</option>
+						<option value="Westmeath">Westmeath</option>
+						<option value="Wexford">Wexford</option>
+						<option value="Wicklow">Wicklow</option>	
+					</select>
+					<br>
+				</div>
+		
+				<div class="col2">
+				
+					Card Holder:<br>
+					<input type="text" id="cardHolder" name="cardHolder"
+						required pattern="[A-Za-z]+\s[A-Za-z]+"
+						title="Firstname Lastname"><br>
+						
+					Card Type:<br>
+					<select class="cardType" id="cardType" name="cardType">
+						<option value="Visa">Visa</option>
+						<option value="V Pay">V Pay</option>
+						<option value="Master Card">Master Card</option>
+						<option value="American Express">American Express
+						</option>
+					</select>
+					<br>
+					
+					Card Number:<br>
+					<input type="text" id="cardNumber" name="cardNumber" 
+						required  pattern="[0-9]{16}"
+						title="Digits Only: xxxx-xxxx-xxxx-xxxx"><br>
+					
+					Expiry Date:<br>
+					<select class="month" id ="month" name="expiryMonth">
+						<option value="January">01</option>
+						<option value="February">02</option>
+						<option value="March">03</option>
+						<option value="April">04</option>
+						<option value="May">05</option>
+						<option value="June">06</option>
+						<option value="July">07</option>
+						<option value="August">08</option>
+						<option value="September">09</option>
+						<option value="October">10</option>
+						<option value="November">11</option>
+						<option value="December">12</option>
+					</select>
+					<select class="year" id="year" name="expiryYear">
+						<option value="2016">16</option>
+						<option value="2017">17</option>
+						<option value="2018">18</option>
+						<option value="2019">19</option>
+						<option value="2020">20</option>
+						<option value="2021">21</option>
+						<option value="2022">22</option>
+						<option value="2023">23</option>
+						<option value="2024">24</option>
+						<option value="2025">25</option>
+						<option value="2026">26</option>
+						<option value="2027">27</option>
+					</select>
+					<br>
+				
+					CV2 Number:<br>
+					<input type="text" id="cv2Number" name="cv2Number"
+					required pattern="[0-9]{3}"
+					title="Digits Only: xxx"><br>
+				
+				</div>
+			</div>
+			<br><br>
+			<br><br>
+			<br><br>
+			<br><br>
+			<br><br>
+			<br><br>
+			<br><br>
+			<div class="BuyNow">
+				<input type="submit" value="Order">
+			</div>
+		</form>
+		
+		</main>
+		
+		<footer class="footer">
+			<p id="footerLeft">Rossa Ave, Bishopstown, Co. Cork</p>
+			<p id="footerRight">Tel: <a class="contactLinks" 
+			href="tel:+353874279418">0874279418</a>
+				E-mail: <a class="contactLinks" 
+				href="mailto:support@shanespizzeria.com">
+				support@shanespizzeria.com</a></p>
+		</footer>
+		
+	</body>
+</html>
