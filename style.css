@@ -1,0 +1,208 @@
+/* Shane Marshall */
+/* R00141496 */
+
+body{
+	background-image: url("img/background1.png");
+	background-color: black;
+	background-attachment: fixed;
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Arial;
+	padding-top: 48px;
+}
+
+main{
+	border-style: groove;
+	border-color: #ffffff;
+	border-radius: 5px;
+	background-image: url("img/main-background.png");
+	background-color: #ededed;
+	padding: 10px;
+}
+
+ul {
+	border-radius: 5px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #009246;
+	width :900px;
+}
+
+li {
+	float: left;
+	border-right: 1px solid #ce2b37;
+}
+
+li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #00b356;
+}
+
+.navbar{
+	position: fixed;
+	top: 0;
+	z-index:50;
+}
+
+#nav-contact{
+	float: right;
+	border-right: none;
+}
+
+#nav-summary{
+	border-right: none;
+}
+
+#Pizza1 {
+	height: 150px;
+	width: 150px;	
+
+}
+
+#Pizza1 img {
+	height: 150px;
+	width: 150px;	
+}
+
+#displayPizza img {
+	height: 400px;
+	width: 400px;
+}
+
+#displayPizza{
+	margin: 0 auto;
+	height: 400px;
+	width: 400px;
+}
+
+#img1{
+	position: absolute;
+	z-index: 1;
+}
+
+#img2{
+	position: absolute;
+	z-index: 2;
+}
+
+#img3{
+	position: absolute;
+	z-index: 3;
+}
+
+#img4{
+	position: absolute;
+	z-index: 4;
+}
+
+#img5{
+	position: absolute;
+	z-index: 5;
+}
+#img6{
+	position: absolute;
+	z-index: 6;
+}
+#img7{
+	position: absolute;
+	z-index: 7;
+}
+#img8{
+	position: absolute;
+	z-index: 8;
+}
+#img9{
+	position: absolute;
+	z-index: 9;
+}
+
+.price{
+	float: right;
+}
+
+#wrapper {
+    width: 55%;
+    margin: 0 auto;
+}
+.col1 {
+	float: left;
+}
+.col2 {
+	float : right;
+}
+
+.cardType{
+	height: 22px;
+	width: 100%;
+}
+
+.countyList{
+	height: 22px;
+	width: 100%;
+}
+
+.month{
+	height: 22px;
+	width: 48.7%;
+}
+
+.year{
+	height: 22px;
+	width: 48.7%;
+}
+
+.BuyNow{
+	text-align: center;
+}
+
+input:invalid { 
+    border: 1px solid #ce2b37;
+}
+
+.footer{
+	color: #ededed
+}
+
+#footerLeft{
+	float:left;
+}
+
+#footerRight{
+	float:right;
+}
+
+#logo{
+	width:160px;
+	height:160px;
+	vertical-align:bottom
+}
+
+.slogan{
+	font-size: 50px;
+	color: 	#ffffff;
+}
+
+.contactLinks{
+	color: #ffffff;
+}
+
+a.contactLinks:hover{
+	color: #009246;
+}
+
+hr{
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #009246; 
+}
